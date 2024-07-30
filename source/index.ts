@@ -200,7 +200,7 @@ class Chromium {
       LambdaFS.inflate(`${input}/swiftshader.tar.br`),
     ];
 
-    if (/^AWS_Lambda_nodejs(?:10|12|14|16)[.]x$/.test(process.env.AWS_EXECUTION_ENV) === true) {
+    if (/^AWS_Lambda_nodejs(?:10|12|14|16|18)[.]x$/.test(process.env.AWS_EXECUTION_ENV) === true) {
       promises.push(LambdaFS.inflate(`${input}/aws.tar.br`));
     }
 
